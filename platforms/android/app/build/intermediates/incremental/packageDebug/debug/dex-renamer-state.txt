@@ -1,0 +1,4 @@
+#Sun Oct 21 20:00:25 BRST 2018
+base.0=C\:\\Users\\jessica\\Documents\\GitHub\\AbrigaData\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Pessoa
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-searchbar (ionInput)="filterPessoas($event)" [(ngModel)]="searchText"></ion-searchbar>
+  <ion-list>
+    <ion-item-sliding *ngFor="let pessoa of pessoas">
+ 
+      <button ion-item (click)="editPessoa(pessoa.cd_pessoa)">
+        <h1>{{ pessoa.nome }}</h1>
+        <h2>{{ pessoa.nome_social }}</h2>
+        <h2>{{ pessoa.cpf }}</h2>
+      </button>
+ 
+      <ion-item-options side="left">
+        <button ion-button color="danger" (click)="removePessoa(pessoa)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+ 
+    </ion-item-sliding>
+  </ion-list>
+  
+  <ion-fab right bottom>
+    <button ion-fab color="light" (click)="addPessoa()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+  
+ 
+  <ion-footer>
+  <ion-toolbar>
+    <p>© 2020 AbrigaData</p>
+  </ion-toolbar>
+</ion-footer>
+</ion-content>
